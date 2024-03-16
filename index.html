@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Entry Form</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON Entry Form</h1>
+    <form id="entryForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
+        </div>
+        <div>
+            <button type="button" onclick="addEntry()">Add Entry</button>
+        </div>
+    </form>
+
+    <script>
+        function addEntry() {
+            // Get the form data
+            const name = document.getElementById('name').value;
+            const category = document.getElementById('category').value;
+            const description = document.getElementById('description').value;
+
+            // Create a new entry object
+            const newEntry = {
+                name: name,
+                category: category,
+                description: description
+            };
+
+            // Send the new entry to your JSON endpoint or handle it as needed
+            console.log('New entry:', newEntry);
+            // You can perform a fetch request to send this data to your server or JSON endpoint
+        }
+    </script>
+</body>
+</html>
