@@ -5,8 +5,8 @@
     <script>
         function addCharacter() {
             var name = document.getElementById("name").value;
-            var color = document.getElementById("color").value;
-            var icon = document.getElementById("icon").value;
+            var element = document.getElementById("element").value;
+            var icon = document.getElementById("element").value;
             var path = document.getElementById("path").value;
             var battle = document.getElementById("battle").value;
             var loc_fac = document.getElementById("loc_fac").value;
@@ -23,9 +23,9 @@
 <body>
     <h1>Add New Character</h1>
     <form>
-        Name: <input type="text" id="name"><br><br>
-        Color: 
-        <select id="color">
+        Name: <input type="text" id="name"><br>
+        Element: 
+        <select id="element">
             <option value="#ff3333">fire</option>
             <option value="#00ade1">ice</option>
             <option value="#feea59">imaginary</option>
@@ -33,15 +33,24 @@
             <option value="#d0d0d0">physical</option>
             <option value="#6b62cf">quantum</option>
             <option value="#00c68c">wind</option>
-        </select><br><br>
-        Icon: <input type="text" id="icon"><br><br>
-        Path: <input type="text" id="path"><br><br>
-        Battle: <input type="text" id="battle"><br><br>
-        Locale & Faction: <input type="text" id="loc_fac"><br><br>
-        Banner: <input type="text" id="banner"><br><br>
-        Update: <input type="text" id="update"><br><br>
-        Previous Versions: <input type="text" id="previous"><br><br>
-        Guide: <input type="text" id="guide"><br><br>
+        </select><br>
+        Path: 
+        <select id="path">
+            <option value="abundance">Abundance</option>
+            <option value="destruction">Destruction</option>
+            <option value="erudition">Erudition</option>
+            <option value="harmony">Harmony</option>
+            <option value="hunt">Hunt</option>
+            <option value="nihility">Nihility</option>
+            <option value="preservation">Preservation</option>
+            <option value="unknown">Unknown</option>
+        </select><br>
+        Battle: <input type="text" id="battle"><br>
+        Locale & Faction: <input type="text" id="loc_fac"><br>
+        Banner: <input type="text" id="banner"><br>
+        Update: <input type="text" id="update"><br>
+        Previous Versions: <input type="text" id="previous"><br>
+        Guide: <input type="text" id="guide"><br>
         <button type="button" onclick="addCharacter()">Add Character</button>
     </form>
 </body>
