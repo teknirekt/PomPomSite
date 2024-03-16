@@ -9,7 +9,8 @@
             var icon = document.getElementById("element").value;
             var path = document.getElementById("path").value;
             var battle = document.getElementById("battle").value;
-            var loc_fac = document.getElementById("loc_fac").value;
+            var loc = document.getElementById("loc").value;
+            var fac = document.getElementById("fac").value;
             var banner = document.getElementById("banner").value;
             var update = document.getElementById("update").value;
             var previous = document.getElementById("previous").value;
@@ -24,7 +25,7 @@
     <h1>Add New Character</h1>
     <form>
         Name: <input type="text" id="name"><br>
-        Element: 
+        Element Color: 
         <select id="element">
             <option value="#ff3333">Fire</option>
             <option value="#00ade1">Ice</option>
@@ -45,12 +46,40 @@
             <option value="preservation">Preservation</option>
             <option value="unknown">Unknown</option>
         </select><br>
-        Battle: <input type="text" id="battle"><br>
-        Locale & Faction: <input type="text" id="loc_fac"><br>
-        Banner: <input type="text" id="banner"><br>
-        Update: <input type="text" id="update"><br>
+        Battle Style: <input type="text" id="battle"><br>
+        Locale Encountered: 
+        <select id="loc">
+            <option value="herta">Herta Space Station</option>
+            <option value="jarilo">Jarilo VI</option>
+            <option value="luofu">Xianzhou Luofu</option>
+            <option value="penacony">Penacony</option>
+        </select><br>
+        Faction:
+        <select id="fac">
+            <option value="nameless">The Nameless</option>
+            <option value="silvermane">Silvermane Guard</option>
+            <option value="wildfire">Wildfire</option>
+            <option value="moles">The Moles</option>
+            <option value="divination">Divination Commission</option>
+            <option value="skyfaring">Sky Faring Commission</option>
+            <option value="cloudknight">Cloud Knights</option>
+            <option value="tenlords">Ten-Lords Commission</option>
+            <option value="alchemy">The Alchemy Commission</option>
+            <option value="stellaron">Stellaron Hunters</option>
+            <option value="ipc">Interastral Peace Corporation</option>
+            <option value="beauty">Knights of Beauty</option>
+            <option value="genius">Genius Society</option>
+            <option value="guild">Intelligentsia Guild</option>
+            <option value="garden">Garden of Recollection</option>
+            <option value="family">The Family</option>
+            <option value="rangers">Galaxy Rangers</option>
+            <option value="annihilation">Annihilation Gang</option>
+            <option value="merchants">Intergalactic Merchants Guild</option>
+        </select><br>
+        Banner Name: <input type="text" id="banner"><br>
+        Version Updated: <input type="text" id="update"><br>
         Previous Versions: <input type="text" id="previous"><br>
-        Guide: <input type="text" id="guide"><br>
+        Guide Link: <input type="text" id="guide"><br>
         <button type="button" onclick="addCharacter()">Add Character</button>
 <!-- Add the read-only text field with static text for quick copy/paste -->
         <input align= "right" type="text" id="readOnlyText" readonly value="Static Text for Quick Copy/Paste">
